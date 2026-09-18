@@ -1,0 +1,6 @@
+if SHIELD_WAFFY75
+
+config ZMK_KEYBOARD_NAME
+    default "waffy75"
+
+endif # SHIELD_WAFFY75

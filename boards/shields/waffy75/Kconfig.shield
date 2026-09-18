@@ -1,0 +1,2 @@
+config SHIELD_WAFFY75
+    def_bool $(shields_list_contains,waffy75)
