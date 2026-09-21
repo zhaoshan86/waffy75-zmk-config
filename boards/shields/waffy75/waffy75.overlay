@@ -24,6 +24,7 @@
     };
 };
 
+
 / {
     chosen {
         zmk,physical-layout = &default_layout;
@@ -44,12 +45,12 @@
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
         col-gpios
             = <&pro_micro 10 GPIO_ACTIVE_HIGH>
-            , <&shifter 0 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 12 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&shifter 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 
@@ -67,6 +68,5 @@
     };
     
 };
-
 
 
