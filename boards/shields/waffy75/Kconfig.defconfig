@@ -2,5 +2,7 @@ if SHIELD_WAFFY75
 
 config ZMK_KEYBOARD_NAME
     default "waffy75"
+config SPI
+    default y
 
 endif # SHIELD_WAFFY75
