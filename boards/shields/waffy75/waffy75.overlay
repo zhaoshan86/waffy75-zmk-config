@@ -6,13 +6,10 @@
 
 #include "waffy75-layouts.dtsi"
 
-&spi1 {
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi1_default>;
-    pinctrl-1 = <&spi1_sleep>;
-    pinctrl-names = "default", "sleep";
+
+&pro_micro_spi {
     status = "okay";
-    cs-gpios = <&pro_micro 5 GPIO_ACTIVE_LOW>;
+    cs-gpios = <&pro_micro 8 GPIO_ACTIVE_LOW>;
     shifter: 595@0 {
         compatible = "zmk,gpio-595";
         status = "okay";
@@ -44,13 +41,13 @@
         // Replace these comments with the GPIO pins in the matrix.
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
         col-gpios
-            = <&pro_micro 10 GPIO_ACTIVE_HIGH> //1.11
-            , <&pro_micro 20 GPIO_ACTIVE_HIGH> //0.31
+            = <&pro_micro 0 GPIO_ACTIVE_HIGH>
+            , <&shifter 1 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> //0.02
-            , <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> //0.30
+            = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&shifter 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 

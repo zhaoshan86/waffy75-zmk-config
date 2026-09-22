@@ -1,0 +1,40 @@
+/ {
+    pro_micro: connector {
+        compatible = "arduino-pro-micro";
+        #gpio-cells = <2>;
+        gpio-map-mask = <0xffffffff 0xffffffc0>;
+        gpio-map-pass-thru = <0 0x3f>;
+        gpio-map
+            = <0 0 &gpio1 11 0>
+            , <1 0 &gpio1 10 0>
+            , <2 0 &gpio0 3 0>  /* AIN1 */
+            , <3 0 &gpio0 28 0> /* AIN4 */
+            , <4 0 &gpio1 13 0>
+            , <5 0 &gpio0 2 0> /* AIN0 */
+            , <6 0 &gpio0 29 0>  /* AIN5 */
+            , <7 0 &gpio0 31 0> /* AIN7 */
+            , <8 0 &gpio0 30 0>  /* AIN6/CS */
+            , <9 0 &gpio0 26 0> /* SPI */
+            /* 10 3.3V */
+            /* 11 GND */
+            /* 12 GND */
+            /* 13 GND */
+            /* 14 GND */
+            /*, <15 0 &gpio0 13 0> SCK */
+            /*, <16 0 &gpio0 24 0> /* SPI */
+            /* 17 SWDIO */
+            /* 18 SWCLK */
+            , <19 0 &gpio0 22 0> /* QSPI */   
+            , <20 0 &gpio1 0 0> /* QSPI */
+            , <21 0 &gpio1 2 0> 
+            , <22 0 &gpio1 4 0>
+            , <23 0 &gpio1 6 0>
+            ;
+    };
+
+};
+
+pro_micro_d: &pro_micro {};
+pro_micro_i2c: &i2c0 {};
+pro_micro_spi: &spi1 {};
+pro_micro_serial: &uart0 {};
