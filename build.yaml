@@ -19,10 +19,10 @@
 #
 ---
 board: [ "ewt73" ]
-shield: [ "waffy75" ]
+# shield: [ "waffy75" ]
 include:
   - board: ewt73
-    shield: waffy75
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: waffy75_with_studio
+    # shield: waffy75
+    # snippet: studio-rpc-usb-uart
+    # cmake-args: -DCONFIG_ZMK_STUDIO=y
+    # artifact-name: waffy75_with_studio
