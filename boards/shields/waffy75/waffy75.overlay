@@ -16,7 +16,7 @@
         spi-max-frequency = <200000>;
         reg = <0>;
         #gpio-cells = <2>;
-        ngpios = <8>;
+        ngpios = <24>;
     };
 };
 
@@ -40,7 +40,7 @@
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
         col-gpios
             = <&pro_micro 0 GPIO_ACTIVE_HIGH>
-            , <&shifter 1 GPIO_ACTIVE_HIGH>
+            , <&shifter 23 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
