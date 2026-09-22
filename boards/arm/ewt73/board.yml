@@ -4,7 +4,6 @@
 
 board:
   name: ewt73
-  vendor: ewt
   socs:
     - name: nrf52840
 
