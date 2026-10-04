@@ -39,14 +39,14 @@
         // Replace these comments with the GPIO pins in the matrix.
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
         col-gpios
-            = <&shifter 21 GPIO_ACTIVE_HIGH>
-            , <&shifter 20 GPIO_ACTIVE_HIGH>
-            , <&shifter 19 GPIO_ACTIVE_HIGH>
-            , <&shifter 18 GPIO_ACTIVE_HIGH>
-            , <&shifter 17 GPIO_ACTIVE_HIGH>
-            , <&shifter 16 GPIO_ACTIVE_HIGH>
+            = <&shifter 14 GPIO_ACTIVE_HIGH>
             , <&shifter 15 GPIO_ACTIVE_HIGH>
-            , <&shifter 14 GPIO_ACTIVE_HIGH>
+            , <&shifter 16 GPIO_ACTIVE_HIGH>
+            , <&shifter 17 GPIO_ACTIVE_HIGH>
+            , <&shifter 18 GPIO_ACTIVE_HIGH>
+            , <&shifter 19 GPIO_ACTIVE_HIGH>
+            , <&shifter 20 GPIO_ACTIVE_HIGH>
+            , <&shifter 21 GPIO_ACTIVE_HIGH>
             , <&shifter 2 GPIO_ACTIVE_HIGH>
             , <&shifter 3 GPIO_ACTIVE_HIGH>
             , <&shifter 4 GPIO_ACTIVE_HIGH>
@@ -90,16 +90,16 @@
         b-gpios = <&pro_micro 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <20>;
         status = "okay";
-    };
+    };n6
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder>;
+nn777       sensors = <&encoder>;
         triggers-per-rotation = <20>;
     };
 
     EXT_POWER {
-        status = "disabled";
+        status = "disabled"; 576
     };
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 };
