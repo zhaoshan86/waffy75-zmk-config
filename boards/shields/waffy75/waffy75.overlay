@@ -90,7 +90,7 @@
         b-gpios = <&pro_micro 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <20>;
         status = "okay";
-    };n6
+    };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
