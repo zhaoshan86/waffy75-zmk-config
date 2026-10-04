@@ -1,43 +1,35 @@
 &pro_micro {
     gpio-map
-        = <0 0 &gpio1 11 0>
-        , <1 0 &gpio1 10 0>
-        , <2 0 &gpio0 3 0>  /* AIN1 */
-        , <3 0 &gpio0 28 0> /* AIN4 */
-        , <4 0 &gpio1 13 0>
-        , <5 0 &gpio0 2 0> /* AIN0 */
-        , <6 0 &gpio0 29 0>  /* AIN5 */
-        , <7 0 &gpio0 31 0> /* AIN7 */
-        , <8 0 &gpio0 30 0>  /* AIN6/CS */
-        , <9 0 &gpio0 26 0> /* SPI */
-        /* 10 3.3V */
-        /* 11 GND */
-        /* 12 GND */
-        /* 13 GND */
-        /* 14 GND */
-        /*, <15 0 &gpio0 13 0> SCK */
-        /*, <16 0 &gpio0 24 0> /* SPI */
-        /* 17 SWDIO */
-        /* 18 SWCLK */
-        , <19 0 &gpio0 22 0> /* QSPI */   
-        , <20 0 &gpio1 0 0> /* QSPI */
-        , <21 0 &gpio1 2 0> 
-        , <22 0 &gpio1 4 0>
-        , <23 0 &gpio1 6 0>
+        = <0 0 &gpio0 31 0>
+        , <1 0 &gpio0 29 0>
+        , <2 0 &gpio0 2 0>  /* ROW1 */ 
+        , <3 0 &gpio1 15 0> /* ROW2 */
+        , <4 0 &gpio1 13 0> /* ROW3 */
+        , <5 0 &gpio1 11 0> /* ROW4 */
+        , <6 0 &gpio0 10 0>  /* ROW5 */
+        , <7 0 &gpio0 9 0> /* ROW6 */
+        , <8 0 &gpio0 17 0>  
+        , <9 0 &gpio0 20 0> 
+        , <10 0 &gpio0 22 0>    
+        , <11 0 &gpio0 24 0> /* ENCODER */
+        , <12 0 &gpio1 0 0> /* ENCODER */
+        , <13 0 &gpio0 11 0> /* LDSTR/CS */
+        // , <14 0 &gpio1 4 0> /* LDSI/MOSI */
+        // , <15 0 &gpio1 6 0> /* LDSCK/SCK */
         ;
 };
 
 &spi1_default {
     group1 {
-        psels = <NRF_PSEL(SPIM_SCK, 0, 13)>,
-            <NRF_PSEL(SPIM_MOSI, 0, 24)>;
+        psels = <NRF_PSEL(SPIM_SCK, 1, 06)>,
+            <NRF_PSEL(SPIM_MOSI, 1, 04)>;
     };
 };
 
 &spi1_sleep {
     group1 {
-        psels = <NRF_PSEL(SPIM_SCK, 0, 13)>,
-            <NRF_PSEL(SPIM_MOSI, 0, 24)>;
+        psels = <NRF_PSEL(SPIM_SCK, 1, 06)>,
+            <NRF_PSEL(SPIM_MOSI, 1, 04)>;
         low-power-enable;
     };
 };
