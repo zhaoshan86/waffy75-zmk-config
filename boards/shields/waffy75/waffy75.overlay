@@ -19,16 +19,11 @@
         ngpios = <24>;
     };
 };
-&vbatt {
-    compatible = "zmk,battery-nrf-vddh";
-    /delete-property/ io-channels;
-    /delete-property/ output-ohms;
-    /delete-property/ full-ohms;
-};
 
 / {
     chosen {
         zmk,physical-layout = &default_layout;
+        zmk,battery = &vbatt;
     };
 
     kscan: kscan {
@@ -102,6 +97,10 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder>;
         triggers-per-rotation = <20>;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
     };
 
     EXT_POWER {
