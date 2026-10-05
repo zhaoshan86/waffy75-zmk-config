@@ -19,6 +19,9 @@
         ngpios = <24>;
     };
 };
+&vbatt {
+    compatible = "zmk,battery-nrf-vddh";
+};
 
 / {
     chosen {
