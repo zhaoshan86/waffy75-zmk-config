@@ -21,6 +21,9 @@
 };
 &vbatt {
     compatible = "zmk,battery-nrf-vddh";
+    /delete-property/ io-channels;
+    /delete-property/ output-ohms;
+    /delete-property/ full-ohms;
 };
 
 / {
